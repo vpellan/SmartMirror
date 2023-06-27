@@ -1,0 +1,24 @@
+SmartMirror v1.0
+
+Programming Team :
+Alexandre Lelievre
+Benoît Popelin
+Victor Pellan
+
+Font Designer :
+Christian Robertson
+
+Thanks to :
+J.M Seguret
+The Processing Foundation
+Java, Sun Microsystems & Oracle
+Kinect & Microsoft
+OpenWeatherMap
+Wikiquotes & Wikimedia
+Minim/ddf/Damien Di Fede
+Konami
+OpenNI Team
+SimpleOpenNI/Max Rheiner
+Greg Borenstein
+Raspberry & Raspberry Pi
+BFM TV
