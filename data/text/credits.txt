@@ -1,15 +1,15 @@
-SmartMirror v1.0
+SmartMirror v1.1
 
 Programming Team :
-Alexandre Lelievre
-Benoît Popelin
+Hyerim Cho
+Amandine Gaubert
+Loic Rafaralahisoa
 Victor Pellan
 
 Font Designer :
 Christian Robertson
 
 Thanks to :
-J.M Seguret
 The Processing Foundation
 Java, Sun Microsystems & Oracle
 Kinect & Microsoft

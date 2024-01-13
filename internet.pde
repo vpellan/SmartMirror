@@ -20,7 +20,6 @@ void internet()
   {
     String[] test = loadStrings("http://www.google.com/");
     String test2 = test[0]+test[1];
-    println(test[0]);
   }
   catch(NullPointerException npe)
   {

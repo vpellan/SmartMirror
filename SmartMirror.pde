@@ -26,6 +26,7 @@ Minim minim;
 AudioPlayer konamisound;
 //SimpleOpenNI kinect;
 
+String weatherLink = "http://api.openweathermap.org/data/2.5/weather?q=Paris&mode=xml&appid=acd0bb48bc0fdeb8cba88756459bbe58&lang=fr&units=metric";
 
 void setup()
 {
@@ -123,7 +124,7 @@ void draw()
     easter();
     lock();
     informations();
-    //meteo();
+    meteo();
     touche = "Null";
     if(run_once == true)
     {

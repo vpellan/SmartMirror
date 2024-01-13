@@ -54,7 +54,7 @@ void informations()
         decalage_aff = 0; // Permettre de remettre à 0 les titres pour éviter le plantage
       }
       textFont(Light18);
-      text(ListeAffichage[i + decalage_aff], xref-width+50, yref+200+(i*60));       //Afficher les titres des actualités avec leurs coordonnées
+      text(ListeAffichage[i + decalage_aff], xref-width*0.95, yref+200+(i*60), xref - width*0.1, yref + 400 + (i*60));       //Afficher les titres des actualités avec leurs coordonnées
     }
     if(ctr_aff < 300)
     {

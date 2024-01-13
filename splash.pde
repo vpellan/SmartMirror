@@ -116,7 +116,7 @@ void splash() //Gère le splash, lors du démarrage du programme
       }
       else
       {
-        result = loadStrings("http://api.openweathermap.org/data/2.5/weather?q=Ingre&mode=xml&appid=2217ca13fc78c8c87ec47511c9f18f54&lang=fr&units=metric");
+        result = loadStrings(weatherLink);
         infos = loadStrings("http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/");
         netLaunch=true;
       }
