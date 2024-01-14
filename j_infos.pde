@@ -15,7 +15,7 @@ void informations()
     {
       if(netLaunch != true)
       {
-        infos = loadStrings("http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/"); // Accéder au site d'information bfmtv.
+        infos = loadStrings(newsLink); // Accéder au site d'information bfmtv.
       }
       for (int i=0; i<infos.length; i++)  // Créer un tableaux des valeurs, du site. 
       {

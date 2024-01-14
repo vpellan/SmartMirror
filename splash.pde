@@ -117,7 +117,7 @@ void splash() //Gère le splash, lors du démarrage du programme
       else
       {
         result = loadStrings(weatherLink);
-        infos = loadStrings("http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/");
+        infos = loadStrings(newsLink);
         netLaunch=true;
       }
       rect(width/2-80,height/2+5,160,10);

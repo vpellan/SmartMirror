@@ -1,5 +1,5 @@
 import ddf.minim.*;
-//import SimpleOpenNI.*; //trucs kinect : l2 l18 l43-47 l104 l106 + onglet kinect + onglet settings l.104-105
+//import SimpleOpenNI.*; //trucs kinect : l2 l18 l53-58 l117 l119 + onglet kinect + onglet settings l.119-120
 
 int jan_fev,annee2,mois2,jour2;
 int alpha_splash,bgcolor;
@@ -27,6 +27,7 @@ AudioPlayer konamisound;
 //SimpleOpenNI kinect;
 
 String weatherLink = "http://api.openweathermap.org/data/2.5/weather?q=Paris&mode=xml&appid=acd0bb48bc0fdeb8cba88756459bbe58&lang=fr&units=metric";
+String newsLink = "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
 
 void setup()
 {
@@ -59,9 +60,6 @@ void setup()
   set0_alpha = 255;
   set1_alpha = 63;
   set2_alpha = 63;
-  jourqotd = str(day());
-  moisqotd = mois;
-  anneeqotd = str(year());
   System.setProperty("java.net.useSystemProxies", "true");
 }
 
@@ -106,14 +104,10 @@ void draw()
     text("Paramètres",xref+width/2-textWidth("Paramètres")/2,yref-height*5/6-48/2+50);//Place le texte au milieu de l'écran
     noTint();
     image(wrench,xref+width/2-64,yref-height*11/12-64);
-    citation();
     textFont(ThinI24);
     textSize(18);
-    text(citation2,xref+width/2-cit2_length/2,yref+height-118);
-    text(citation,xref+width/2-cit_length/2,yref+height-100);
     textFont(Thin18);
     textSize(18);
-    text(auteur,xref+width*4/5-aut_length/2,yref+height-76);
     //kinect.update(); 
     
     //kinectmvmt();

@@ -7,11 +7,9 @@ void meteo()
 {
   if((run_once == true || minute()%10==0 && second()==0 && frameCount%30==0) && erreurGoogle != true)
   {
-    print(netLaunch);
-    print('\n');
     if(netLaunch != true)
     {
-      result = loadStrings("http://api.openweathermap.org/data/2.5/weather?q=Paris&mode=xml&appid=acd0bb48bc0fdeb8cba88756459bbe58&lang=fr&units=metric");
+      result = loadStrings(weatherLink);
       netLaunch = false;
     }
     output = createWriter("data/text/meteo.xml");
