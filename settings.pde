@@ -116,8 +116,8 @@ void parametres()
       text("Caméra Infrarouge", xref+width*2.5-textWidth("Caméra Infrarouge")/2,yref-height+108);
       text("Caméra Couleur", xref+width*2.5-textWidth("Caméra Couleur")/2,yref-696);
       tint(255,255);
-      //image(kinect.depthImage(), xref+width*2.5-320,yref-height+108);
-      //image(kinect.rgbImage(), xref+width*2.5-320,yref-588);
+      image(kinect.depthImage(), xref+width*2.5-320,yref-height+108);
+      image(kinect.rgbImage(), xref+width*2.5-320,yref-588);
     }
     if(selected_setting == 2)
     {

@@ -1,5 +1,5 @@
 import ddf.minim.*;
-//import SimpleOpenNI.*; //trucs kinect : l2 l18 l53-58 l117 l119 + onglet kinect + onglet settings l.119-120
+import SimpleOpenNI.*; //trucs kinect : l2 l27 l53-58 l117 l119 + onglet kinect + onglet settings l.119-120
 
 int jan_fev,annee2,mois2,jour2;
 int alpha_splash,bgcolor;
@@ -24,7 +24,7 @@ PImage Scatteredclouds;
 PImage Snow, moon, nightClouds;
 Minim minim;
 AudioPlayer konamisound;
-//SimpleOpenNI kinect;
+SimpleOpenNI kinect;
 
 String weatherLink = "http://api.openweathermap.org/data/2.5/weather?q=Paris&mode=xml&appid=acd0bb48bc0fdeb8cba88756459bbe58&lang=fr&units=metric";
 String newsLink = "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
@@ -51,12 +51,11 @@ void setup()
   lock = false; //Miroir non bloqué par défaut
   page = "M"; //La page par défaut est celle du milieu
   mois();
-  /*
   kinect = new SimpleOpenNI(this);//
   kinect.enableDepth();           //Initialisation camera de profondeur
   kinect.enableRGB();
-  kinect.enableUser(SimpleOpenNI.SKEL_PROFILE_UPPER);//Active tracking du haut du corps 
-  kinect_coolDown = 0; */
+  kinect.enableUser();//Active tracking du haut du corps 
+  kinect_coolDown = 0;
   set0_alpha = 255;
   set1_alpha = 63;
   set2_alpha = 63;
@@ -108,9 +107,9 @@ void draw()
     textSize(18);
     textFont(Thin18);
     textSize(18);
-    //kinect.update(); 
+    kinect.update(); 
     
-    //kinectmvmt();
+    kinectmvmt();
     parametres();
     picto();
     page();

@@ -5,7 +5,7 @@ PVector[] rHandPos = new PVector[10];
 PVector lHandMove, rHandMove;
 boolean stopMove,tracking,lockTmp;
 
-/* void kinectmvmt() 
+void kinectmvmt() 
 {
   stroke(255, 0, 0);
   strokeWeight(5);
@@ -126,29 +126,12 @@ boolean stopMove,tracking,lockTmp;
 }
 
 // Rappel du tracking de l'utilisateur
-void onNewUser(int userId) 
-{
-  println("start pose detection");
-  kinect.startPoseDetection("Psi", userId);
+void onNewUser(SimpleOpenNI kinect, int userId){
+  println("Start skeleton tracking");
+  kinect.startTrackingSkeleton(userId);
 }
 
-void onEndCalibration(int userId, boolean successful) 
+void onLostUser(SimpleOpenNI curContext, int userId)
 {
-  if (successful) 
-  {
-    println(" User calibrated !!!");
-    kinect.startTrackingSkeleton(userId);
-  }
-  else 
-  {
-    println(" Failed to calibrate user !!!");
-    kinect.startPoseDetection("Psi", userId);
-  }
+  println("onLostUser - userId: " + userId);
 }
-
-void onStartPose(String pose, int userId) 
-{
-  println("Started pose for user");
-  kinect.stopPoseDetection(userId);
-  kinect.requestCalibrationSkeleton(userId, true);
-} */
